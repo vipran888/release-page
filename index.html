@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f1115">
+<meta name="description" content="地址发布页 - 收藏本页，永不迷路">
+<title>地址发布页 · 收藏不迷路</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0f1115; --card:#171a21; --line:#252932;
+  --txt:#e6e8ee; --dim:#8b91a0; --accent:#4f9cf9; --ok:#3ddc97;
+}
+html{-webkit-text-size-adjust:100%}
+body{
+  min-height:100vh; background:var(--bg); color:var(--txt);
+  font:15px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  display:flex; flex-direction:column; align-items:center;
+  padding:40px 18px 60px; -webkit-font-smoothing:antialiased;
+}
+.wrap{width:100%;max-width:560px}
+header{text-align:center;margin-bottom:32px}
+.logo{
+  width:58px;height:58px;margin:0 auto 16px;border-radius:16px;
+  background:linear-gradient(135deg,#4f9cf9,#7b61ff);
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;font-weight:700;color:#fff;
+  box-shadow:0 8px 24px rgba(79,156,249,.28);
+}
+h1{font-size:21px;font-weight:600;letter-spacing:.3px}
+.sub{color:var(--dim);font-size:13px;margin-top:7px}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;
+  margin-top:14px;padding:5px 12px;border-radius:999px;
+  background:rgba(61,220,151,.1);color:var(--ok);
+  font-size:12px;border:1px solid rgba(61,220,151,.22);
+}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--ok);
+  box-shadow:0 0 0 0 rgba(61,220,151,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(61,220,151,0)}100%{box-shadow:0 0 0 0 rgba(61,220,151,0)}}
+
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:6px;margin-bottom:16px;
+}
+.item{
+  display:flex;align-items:center;gap:13px;
+  padding:14px;border-radius:10px;
+  text-decoration:none;color:inherit;
+  transition:background .16s ease,transform .16s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.item:hover,.item:focus-visible{background:#1e2230;transform:translateX(2px);outline:none}
+.item+.item{border-top:1px solid rgba(37,41,50,.7)}
+.ico{
+  flex:0 0 36px;height:36px;border-radius:10px;
+  background:#20242f;display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:600;color:var(--accent);
+}
+.meta{flex:1;min-width:0}
+.name{font-size:14.5px;font-weight:500}
+.url{
+  font-size:12px;color:var(--dim);margin-top:2px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.arrow{color:#4a4f5e;font-size:16px;flex:0 0 auto;transition:color .16s}
+.item:hover .arrow{color:var(--accent)}
+
+.note{
+  margin-top:22px;padding:16px 18px;
+  background:rgba(79,156,249,.06);border:1px solid rgba(79,156,249,.16);
+  border-radius:12px;font-size:13px;color:#a9b0c0;line-height:1.85;
+}
+.note b{color:#cfd4e0;font-weight:600}
+.note code{
+  background:#20242f;padding:1px 6px;border-radius:4px;
+  font-family:ui-monospace,Consolas,monospace;font-size:12px;color:#7bb8ff;
+}
+footer{
+  margin-top:auto;padding-top:36px;
+  font-size:12px;color:#585e6d;text-align:center;line-height:2;
+}
+footer a{color:#585e6d;text-decoration:none;border-bottom:1px solid #33384a}
+footer a:hover{color:var(--accent);border-color:var(--accent)}
+@media(max-width:400px){
+  body{padding:28px 14px 44px}
+  h1{font-size:19px}
+  .item{padding:12px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">時</div>
+    <h1>地址发布页</h1>
+    <p class="sub">收藏本页，换域名也不会迷路</p>
+    <div class="badge"><span class="dot"></span><span id="status">线路正常</span></div>
+  </header>
+
+  <nav class="card" aria-label="站点列表">
+    <a class="item" href="https://www.shiguang666.eu.org/" target="_blank" rel="noopener">
+      <div class="ico">主</div>
+      <div class="meta">
+        <div class="name">主站</div>
+        <div class="url">www.shiguang666.eu.org</div>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+    <a class="item" href="https://blog.shiguang666.eu.org/" target="_blank" rel="noopener">
+      <div class="ico">博</div>
+      <div class="meta">
+        <div class="name">博客</div>
+        <div class="url">blog.shiguang666.eu.org</div>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+    <a class="item" href="https://nav.shiguang666.eu.org/" target="_blank" rel="noopener">
+      <div class="ico">导</div>
+      <div class="meta">
+        <div class="name">导航</div>
+        <div class="url">nav.shiguang666.eu.org</div>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+    <a class="item" href="https://blog.shiguang88.icu/" target="_blank" rel="noopener">
+      <div class="ico">备</div>
+      <div class="meta">
+        <div class="name">备用线路</div>
+        <div class="url">blog.shiguang88.icu</div>
+      </div>
+      <div class="arrow">›</div>
+    </a>
+  </nav>
+
+  <div class="note">
+    <b>提示</b><br>
+    1. 请按 <code>Ctrl</code> + <code>D</code>（手机长按地址栏）收藏本页<br>
+    2. 若无法打开，请更换 Chrome / Edge 浏览器<br>
+    3. 国内网络请关闭或切换代理后重试<br>
+    4. 本页长期有效，地址变更会在此更新
+  </div>
+
+  <footer>
+    <div>© 2026 保留所有权利</div>
+    <div>最近更新：<span id="upd">2026-11-17</span></div>
+  </footer>
+
+</div>
+</body>
+</html>

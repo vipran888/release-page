@@ -1,0 +1,5 @@
+# 部署到 Vercel 用不到这个文件，留作 GitHub Pages 的 CNAME 示例。
+# 若改用 GitHub Pages 并绑定自定义域名，把下面这行改成你的域名，
+# 然后把文件名从 CNAME.example 改成 CNAME（无扩展名）：
+#
+# release.your-domain.eu.org
