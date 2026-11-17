@@ -1,0 +1,8 @@
+{
+  "name": "release-page",
+  "compatibility_date": "2026-11-17",
+  "assets": {
+    "directory": "./",
+    "exclude": ["README.md", ".gitignore", "wrangler.jsonc"]
+  }
+}
