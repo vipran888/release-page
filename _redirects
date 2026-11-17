@@ -1,0 +1,7 @@
+# Cloudflare Pages 重定向配置
+# 文档: https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# 格式: 源路径  目标路径  状态码
+# 例：把已废弃的旧路径跳到首页
+#
+# /old-path  /  301
