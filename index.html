@@ -517,6 +517,13 @@
 						<h2>请 Ctrl+D 收藏本页到浏览器收藏夹</h2>
 						<ul>
 							<li>
+								永久联系方式:
+								<a href="https://url.0qq.top/s/FqbwC"
+									target="_blank"><i>https://url.0qq.top/s/FqbwC</i></a>
+
+								</span></span>
+							</li>
+							<li>
 								小艾博客（主站）:
 								<a href="https://xaxxkj.cn" target="_blank"><i>https://xaxxkj.cn</i></a>
 
@@ -537,13 +544,6 @@
 								</span></span>
 							</li>
 							<li>
-								永久联系方式:
-								<a href="https://url.0qq.top/s/FqbwC"
-									target="_blank"><i>https://url.0qq.top/s/FqbwC</i></a>
-
-								</span></span>
-							</li>
-							<li>
 								<span>近期部分国产浏览器屏蔽网址，电脑请安装<a href="https://www.google.cn/chrome/"
 										target="_blank">chrome浏览器</a>访问，手机请安装<a href="https://www.xbext.com/"
 										target="_blank">X浏览器</a>访问。<span>
@@ -552,7 +552,7 @@
 
 					</div>
 				</div>
-				<p class="footer">小艾 © 2024 xaxxkj.cn All Rights Reserved</p>
+				<p class="footer">小艾 © <span id="year">2024</span> xaxxkj.cn All Rights Reserved</p>
 			</div>
 			<ul class="bg-bubbles">
 				<li></li>
@@ -568,8 +568,14 @@
 			</ul>
 		</div>
 	</div>
-	<!-- 原站此处为 CNZZ 统计脚本（归属原作者的账号），已移除。
-	     如需统计请替换为自己的：https://web.umeng.com/ 或 https://analytics.google.com/ -->
+	<!-- 原站此处为 CNZZ 统计脚本（归属于原作者的账号），已替换为年份自动更新 -->
+	<script>
+		(function () {
+			var el = document.getElementById('year');
+			if (el) el.textContent = new Date().getFullYear();
+		})();
+	</script>
+
 </body>
 
 </html>
